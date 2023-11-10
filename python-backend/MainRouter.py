@@ -7,7 +7,7 @@ router = APIRouter(tags=["MAIN"])
 
 @router.get('/')
 async def get_main():
-    with open('static/main.html', 'r') as html:
+    with open('static/index.html', 'r') as html:
         data = html.read()
         return HTMLResponse(content=data)
 
