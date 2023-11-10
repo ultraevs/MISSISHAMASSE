@@ -427,3 +427,44 @@ h2{
 .event__more-left p:nth-child(1) {
     font-size: 1.5rem;
 }
+
+/* ГЛЕБ */
+
+footer{
+    background: #000;
+    color: white;
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+footer .foot-up, .foot-down{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.foot-down{
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.foot-down p{
+    text-align: right;
+}
+
+footer .phone, .email, .tg, .vk{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    font-size: 1rem;
+}
