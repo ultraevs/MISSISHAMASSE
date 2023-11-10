@@ -3,5 +3,4 @@ uvicorn
 pydantic
 pydantic-settings
 sqlalchemy
-mysql
-mysql-connector-python
+psycopg2
