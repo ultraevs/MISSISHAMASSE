@@ -30,11 +30,12 @@ class Event(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(50))
     time = Column(String(50))
+    date = Column(String(50))
     type = Column(String(50))
     activity_field = Column(String(50))
     visit_type = Column(String(50))
     interes_sphere = Column(String(50))
-    description = Column(String(50))
+    description = Column(String(1000))
 
 
 Base.metadata.create_all(bind=engine)
