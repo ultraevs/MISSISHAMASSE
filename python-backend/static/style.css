@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+
+    flex-direction: column;
+}
+
+
+.container1{
+    background-image: url(assets/back-img.png );
+
+    background-size: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    transition: 0.5s linear;
+
+    position: fixed;
+    top: 0;
+}
+
+.header.back{
+    background: #FAFBEF;
+    transition: 0.5s linear;
+    border-bottom: solid black 1px;
+
+}
+
+.header.back a{
+    color: #000;
+    transition: 0.5s linear;
+}
+
+.header.back .centr-nav{
+    color: #000;
+    font-family: 'Inknut Antiqua';
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 1;
+}
+
+.header.back nav{
+    padding: 0 5rem;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    padding: 1.5rem 5rem;
+
+}
+
+.centr-nav{
+    opacity: 0;
+    padding-left: 7rem;
+}
+
+.left-nav, .right-nav{
+    display: flex;
+    gap: 1.5rem;
+}
+
+
+a{
+    text-decoration: none;
+    
+    color: #FFF;
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main-title__name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12.5rem;
+}
+
+h1{
+    color: #FFF;
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: 4.375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.container2{
+    background: #FAFBEF;
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 1rem 8rem 5rem;
+    gap: 6rem;
+}
+
+.description__info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10rem;
+}
+
+.description__info p{
+    color: #000;
+    text-align: center;
+    font-family: 'JetBrains Mono';
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.description__info p:nth-child(3){
+    writing-mode: vertical-rl;
+    transform: 90deg;
+    color: #000;
+    font-family: 'Inknut Antiqua';
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
+
+h2{
+    color: #000;
+    font-family: 'JetBrains Mono';
+    font-size: 2.1875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.container3{
+    min-height: 100vh;
+    background: #FAFBEF;
+}
+
+.container3 img{
+    margin-top: 8rem;
+    width: 100%;
+    position: relative;
+}
+
+.container3 span{
+    color: #FAFBEF;
+    font-family: 'JetBrains Mono';
+    font-size: 9.375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    position: relative;
+    bottom: 9.6875rem;
+    left: 3.125rem;
+}
