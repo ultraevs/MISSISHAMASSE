@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
 
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -37,6 +38,7 @@ body{
 
     position: fixed;
     top: 0;
+    z-index: 1000;
 }
 
 .header.back{
@@ -135,7 +137,7 @@ h1{
     gap: 10rem;
 }
 
-.description__info p{
+.description__info p:nth-child(2){
     color: #000;
     text-align: center;
     font-family: 'JetBrains Mono';
@@ -145,7 +147,7 @@ h1{
     line-height: normal;
 }
 
-.description__info p:nth-child(3){
+.vertical{
     writing-mode: vertical-rl;
     transform: 90deg;
     color: #000;
@@ -165,9 +167,10 @@ h2{
     line-height: normal;
 }
 
-.container3{
+.container3, .container4{
     min-height: 100vh;
     background: #FAFBEF;
+
 }
 
 .container3 img{
@@ -187,4 +190,76 @@ h2{
     position: relative;
     bottom: 9.6875rem;
     left: 3.125rem;
+}
+
+/* КОСТЯ */
+
+.description-excursion{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 8rem 5rem;
+}
+
+.ourExcursion {
+    font-family: "JetBrains Mono", sans-serif;
+    /* margin-top: 4rem; */
+}
+
+.ourExcursion .container h2 {
+    font-size: 2.2rem;
+}
+
+.ourExcursion__excursions {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.excursion {
+    cursor: pointer;
+    border: 1px solid black;
+    transition: 0.5s ease;
+}
+
+.excursion:hover {
+    transform: scale(1.07);
+}
+
+.excursion img {
+    width: 385px;
+    height: 350px;
+}
+
+.excursion__text {
+    padding: 0.7rem 1.3rem;
+}
+
+.excursion__text h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.excursion__text p {
+    margin-top: 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.excursion__more {
+    margin-top: 3rem;
+    border-top: solid 1px black;
+    padding: 0.5rem 1.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.excursion__more p {
+    font-size: 1rem;
+}
+
+.excursion__more p:hover {
+    color: rgb(159, 159, 0);
 }
