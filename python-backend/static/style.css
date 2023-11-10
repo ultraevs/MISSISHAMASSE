@@ -12,6 +12,7 @@ body{
     justify-content: center;
     min-height: 100vh;
     width: 100%;
+    background: #FAFBEF;
 
     flex-direction: column;
 }
@@ -57,9 +58,6 @@ body{
     opacity: 1;
 }
 
-.header.back nav{
-    padding: 0 5rem;
-}
 
 nav{
     display: flex;
@@ -68,7 +66,7 @@ nav{
     justify-content: space-between;
     width: 100%;
 
-    padding: 1.5rem 5rem;
+    padding: 0 5rem;
 
 }
 
@@ -129,7 +127,7 @@ h1{
 .description{
     display: flex;
     flex-direction: column;
-    padding: 8rem 1rem 8rem 5rem;
+    padding: 8rem 1rem 0 5rem;
     gap: 6rem;
 }
 
@@ -171,21 +169,18 @@ h2{
 }
 
 .container3, .container4, .container5{
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background: #FAFBEF;
 
 }
 
-.container3{
-    margin-bottom: -12rem;
+.container3, .town{
+    height: 650px;
 }
 
-.container4{
-    margin-bottom: -8rem;
-}
 
 .container3 img{
-    margin-top: 8rem;
+    /* margin-top: 8rem; */
     width: 100%;
     position: relative;
 }
@@ -293,14 +288,20 @@ h2{
 }
 
 .calendar {
-    margin-top: 4rem;
+
     font-family: "JetBrains Mono", sans-serif;
+}
+
+.calendar-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .description-calendar{
     display: flex;
     flex-direction: column;
-    padding: 0 1rem 5rem 5rem;
+    padding: 10rem 1rem 5rem 5rem;
 }
 
 .calendar .container h2 {
@@ -342,6 +343,7 @@ h2{
     display: flex;
     flex-direction: column;
     gap: 1.3rem;
+    
 }
 
 .events__top,
@@ -353,7 +355,7 @@ h2{
 
 .day__date {
     padding: 2rem;
-    border-right: solid 1px black;
+    /* border-right: solid 1px black; */
 }
 
 .day__date p {
@@ -424,4 +426,45 @@ h2{
 
 .event__more-left p:nth-child(1) {
     font-size: 1.5rem;
+}
+
+/* ГЛЕБ */
+
+footer{
+    background: #000;
+    color: white;
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+footer .foot-up, .foot-down{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.foot-down{
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.foot-down p{
+    text-align: right;
+}
+
+footer .phone, .email, .tg, .vk{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    font-size: 1rem;
 }
