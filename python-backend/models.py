@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Float
 from sqlalchemy.orm import declarative_base
 from database import engine
 Base = declarative_base()
@@ -9,7 +9,9 @@ class Sightseeing(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)  # noqa: A003
     name = Column(String(200))
-    coordinate = Column(String(500))
+    coord_x = Column(Float(50))
+    coord_y = Column(Float(50))
+    description = Column(String(1000))
 
 
 class Road(Base):
