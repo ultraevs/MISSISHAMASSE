@@ -355,7 +355,7 @@ h2{
 
 .day__date {
     padding: 2rem;
-    border-right: solid 1px black;
+    /* border-right: solid 1px black; */
 }
 
 .day__date p {
