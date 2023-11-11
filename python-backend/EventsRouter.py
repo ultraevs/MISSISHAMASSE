@@ -8,7 +8,6 @@ from schemas import ExcursionDto
 import datetime
 
 
-
 router = APIRouter(tags=["Events"])
 
 @router.get('/initdb')
@@ -23,19 +22,9 @@ interes_sphere='IT', description='DESCRIPTION', datee='12'))
 interes_sphere='IT', description='DESCRIPTION', datee='12'))
     session.commit()
 
+
 @router.get('/events/')
 async def current_event_get(session: Session = Depends(get_db)):
     event = session.execute(select(Event).where(Event.datee==str(int(datetime.datetime.now().day)))).scalars()
     return {"data": datetime.datetime.now().day, "event": [i for i in event]}
 
-@router.post('/excursion/add/')
-async def initdb(session: Session = Depends(get_db)):
-    excursion = insert(Excursion).values(name='Excursion', short_description='Cool excursion', description='Really cool excursion', duration=90, person='Ivan', person_photo_path='/static/photos/1.jpg')
-    session.execute(excursion)
-    session.commit()
-
-@router.get("/excursion/{excursion_id}", response_model=ExcursionDto | None)
-async def get_excursions(excursion_id: int, session: Session = Depends(get_db)) -> ExcursionDto | None:
-    query = select(Excursion).where(Excursion.id == excursion_id).limit(1)
-    excursion = session.execute(query).scalar()
-    return excursion

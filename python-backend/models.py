@@ -9,9 +9,9 @@ class Sightseeing(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)  # noqa: A003
     name = Column(String(200))
-    coord_x = Column(Float(50))
-    coord_y = Column(Float(50))
-    description = Column(String(1000))
+    firstname = Column(String(50))
+    description = Column(String(200))
+
 
 class Excursion(Base):
     __tablename__ = 'excursions' 
@@ -29,7 +29,8 @@ class Road(Base):
     __tablename__ = "roads"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    name = Column(String(50))
+    name = Column(String(100))
+    firstname = Column(String(100))
     description = Column(String(1000))
     main_photo = Column(String(100))
     profile_photo = Column(String(100))
