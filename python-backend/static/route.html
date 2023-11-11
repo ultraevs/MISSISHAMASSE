@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routs</title>
+    <!-- <link rel="stylesheet" href="static/route.css"> -->
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #FAFBEF;
+}
+
+.navbar {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    border-bottom: solid 1px black;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    transition: 0.5s ease;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    gap: 2rem;
+}
+
+.header-left a:hover,
+.header-right a:hover {
+    color: rgb(171, 171, 0);
+}
+
+
+.navbar .title {
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: 2rem;
+}
+
+.route {
+    font-family: "JetBrains Mono", sans-serif;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.route .container {
+    padding: 0 3rem;
+}
+
+.route__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.route__title h2 {
+    margin-top: 1rem;
+    font-size: 3.125rem;
+    font-weight: 400;
+}
+
+.route__title p {
+    font-size: 2.125rem;
+    font-weight: 400;
+}
+
+.info__left-about {
+    width: 25rem;
+    border: solid 1px black;
+}
+
+.info__left-about img {
+    width: 100%;
+    height: 100%;
+}
+
+.about__text {
+    padding: 0.688rem 1.313rem 3rem 1.313rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.btn {
+    cursor: pointer;
+    margin-top: 2rem;
+    padding: 0.813rem 1.313rem;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #FDFBF9;
+    text-align: center;
+    width: 12rem;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.route__info {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.info__right h3 {
+    font-size: 1.563rem;
+    font-weight: 400;
+}
+
+.info__right-user img {
+    width: 70px;
+    height: 70px;
+    border-radius: 1000px;
+}
+
+.user__info {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.desc {
+    margin-top: 2rem;
+}
+    </style>
+    <script src="back.js" defer></script>
+
+</head>
+<body>
+    
+    <section class="route">
+        <header>
+            <nav class="navbar">
+                <div class="header-left">
+                    <a href="index.html">[начало]</a>
+                    <a href="#">[экскурсии]</a>
+                </div>
+                <a href="index.html" class="title">Smolatour</a>
+                <div class="header-right">
+                    <a href="#">[маршруты]</a>
+                    <a href="#">[события]</a>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="route__title">
+                <h2>Посещение Смоленкой крепости</h2>
+                <p>~1ч.</p>
+            </div>
+            <div class="route__info">
+                <div class="info__left">
+                    <div class="info__left-about">
+                        <img src="assets/lighter.jpeg" alt="">
+                        <div class="about__text">
+                            <h3>Часовая прогулка по Смоленкой крепости</h3>
+                            <p>Посетите знаменитые места Смоленска</p>
+                        </div>
+                    </div>
+                    <p class="btn">Открыть маршрут</p>
+                </div>
+                <div class="info__right">
+                    <h3>Посетите знаменитые места Смоленска</h3>
+                    <div class="info__right-user">
+                        <div class="user__info">
+                            <img src="static/assets/user.jpeg" alt="">
+                            <div class="user__description">
+                                <h3>Пользователь</h3>
+                                <p>Костя Цой</p>
+                            </div>
+                        </div>
+                        <p class="desc">Смоленская крепостная стена – памятник русского оборонительного зодчества, одна из крупнейших крепостей мира, символ российской истории и государственности</p>
+                        <p>Смоленск на протяжении многих десятилетий был надежной защитой Руси от угрозы с Запада. При Иване Грозном город был окружен мощной деревянной стеной, но к XVI веку с развитием артиллерии деревянная крепостная стена больше не могла служить надежной защитой, и было принято решение о строительстве каменного кремля. Руководил строительством архитектор Федор Конь.</p>
+                        <p>Строительство было начато в 1596 году. По личному распоряжению Бориса Годунова в городе было запрещено осуществлять любое другое каменное строительство – весь доступный материал и силы строителей были направлены на возведение стен и башен новой фортификации. Основные работы были завершены спустя четыре года. В 1606 году крепость освятили.</p>
+                        <p>В строительстве были использованы прочнейшие дубовые сваи, толстенные бревна и много камня, скрепленного суперпрочным раствором. Надежность сооружения не вызывала сомнений, но у Смоленской крепости все же был изъян – часть восточной стены, наспех возведенная в период межсезонья протестующими против недостаточного жалованья рабочими. Впоследствии именно этой ахиллесовой пятой воспользуются польские интервенты, чтобы захватить город в ходе 20-месячной осады.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
