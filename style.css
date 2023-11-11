@@ -504,6 +504,10 @@ footer a{
     color: white;
 }
 
+footer p{
+    font-family: 'Times New Roman', sans-serif;
+}
+
 footer .foot-up, .foot-down{
     display: flex;
     flex-direction: row;
