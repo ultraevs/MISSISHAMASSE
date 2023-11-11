@@ -83,6 +83,8 @@ nav{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
+    margin-left: -2.5rem;
 }
 
 .left-nav, .right-nav{
@@ -90,9 +92,11 @@ nav{
     gap: 1.5rem;
 }
 
-
 a{
     text-decoration: none;
+}
+
+.left-nav a, .right-nav a{
     
     color: #FFF;
     font-family: 'JetBrains Mono', sans-serif;
@@ -102,12 +106,17 @@ a{
     line-height: normal;
 }
 
+.main-title{
+    width: auto;
+}
+
 .main-title__name{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 19rem;
-    margin-left: 40rem;
+    /* margin-left: 40rem; */
+    width: auto;
 }
 
 h1{
@@ -247,6 +256,7 @@ h2{
 }
 
 .excursion__text {
+    width: auto;
     padding: 0.7rem 1.3rem;
 }
 
@@ -262,6 +272,7 @@ h2{
 }
 
 .excursion__more {
+    width: auto;
     margin-top: 3rem;
     border-top: solid 1px black;
     padding: 0.5rem 1.3rem;
@@ -277,9 +288,42 @@ h2{
     color: rgb(159, 159, 0);
 }
 
+.excursion__more p a{
+    color: #000;
+}
+
+.excursion__more p a:hover {
+    color: rgb(159, 159, 0);
+}
+
 .user {
+    width: auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    /* align-items: center; */
+}
+
+.user img{
+    margin-left: 2.4rem;
+}
+
+.user p{
+    padding: 0;
+    margin: 0;
+
+    color: #000;
+    text-align: center;
+    font-family: 'JetBrains Mono';
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.375rem;
+    letter-spacing: -0.0255rem;
+
+    border-radius: 99px;
+    border: 1px solid #000;
+
+    padding: 1px 5px;
 }
 
 .excursion__text .user img {
@@ -441,6 +485,10 @@ h2{
 
 /* ГЛЕБ */
 
+hr{
+    width: 100%;
+}
+
 footer{
     background: #000;
     color: white;
@@ -450,6 +498,10 @@ footer{
     flex-direction: column;
     gap: 3rem;
     width: auto;
+}
+
+footer a{
+    color: white;
 }
 
 footer .foot-up, .foot-down{
