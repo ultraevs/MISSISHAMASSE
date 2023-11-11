@@ -5,13 +5,24 @@ Base = declarative_base()
 
 
 class Sightseeing(Base):
-    __tablename__ = "sightseeings"
+    __tablename__ = "sightseeing"
 
     id = Column(Integer, primary_key=True, autoincrement=True)  # noqa: A003
     name = Column(String(200))
     coord_x = Column(Float(50))
     coord_y = Column(Float(50))
     description = Column(String(1000))
+
+class Excursion(Base):
+    __tablename__ = 'excursions' 
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(String(200))
+    short_description = Column(String(200))
+    description = Column(String(1000))
+    duration = Column(Integer)
+    person = Column(String(100))
+    person_photo_path = Column(String(100))
 
 
 class Road(Base):
@@ -37,5 +48,5 @@ class Event(Base):
     interes_sphere = Column(String(50))
     description = Column(String(1000))
 
-
+Base.metadata.drop_all(bind=engine)
 Base.metadata.create_all(bind=engine)
