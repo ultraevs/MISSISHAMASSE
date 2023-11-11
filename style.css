@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    width: fit-content;
 }
 
 body{
@@ -106,6 +107,7 @@ a{
     align-items: center;
     justify-content: center;
     margin-top: 19rem;
+    margin-left: 40rem;
 }
 
 h1{
@@ -157,6 +159,7 @@ h1{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
     }
 
 h2{
@@ -171,6 +174,7 @@ h2{
 .container3, .container4, .container5{
     /* min-height: 100vh; */
     background: #FAFBEF;
+    width: auto;
 
 }
 
@@ -201,14 +205,16 @@ h2{
 /* КОСТЯ */
 
 .description-excursion{
+    width: auto;
     display: flex;
     flex-direction: column;
     padding: 10rem 1rem 0 5rem;
 }
 
 .ourExcursion {
+    width: auto;
     font-family: "JetBrains Mono", sans-serif;
-    /* margin-top: 4rem; */
+    
 }
 
 .ourExcursion .container h2 {
@@ -218,6 +224,7 @@ h2{
 .ourExcursion__excursions {
     margin-top: 4rem;
     display: flex;
+    width: auto;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
@@ -284,11 +291,12 @@ h2{
 }
 
 .container6{
+    width: auto;
     background: #FAFBEF;
 }
 
 .calendar {
-
+    width: auto;
     font-family: "JetBrains Mono", sans-serif;
 }
 
@@ -299,6 +307,7 @@ h2{
 }
 
 .description-calendar{
+    width: auto;
     display: flex;
     flex-direction: column;
     padding: 10rem 1rem 5rem 5rem;
@@ -331,6 +340,7 @@ h2{
 }
 
 .calendar__day {
+    width: auto;
     margin-top: 3rem;
     font-family: "Playfair Display", sans-serif;
     display: flex;
@@ -343,7 +353,8 @@ h2{
     display: flex;
     flex-direction: column;
     gap: 1.3rem;
-    
+    /* margin-right: 12rem; */
+
 }
 
 .events__top,
@@ -400,7 +411,7 @@ h2{
 }
 
 .event__text p:nth-child(2) {
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .event__text p:nth-child(3) {
@@ -438,6 +449,7 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    width: auto;
 }
 
 footer .foot-up, .foot-down{
@@ -445,6 +457,7 @@ footer .foot-up, .foot-down{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: auto;
 }
 
 .foot-down{
@@ -467,4 +480,12 @@ footer .phone, .email, .tg, .vk{
     gap: 8px;
 
     font-size: 1rem;
+}
+
+@media screen and (min-widt: 500px) {
+    .container1{
+        width: 100%;
+        background-size: cover;
+    }
+    
 }
