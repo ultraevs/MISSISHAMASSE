@@ -7,12 +7,7 @@ from EventsRouter import router as events_router
 from ExcursionRouter import router as excursion_router
 from RoadRouter import router as road_router
 app = FastAPI(title="SMOLATOUR")
-origins = [
-    "http://localhost.tiangolo.com",
-    "https://localhost.tiangolo.com",
-    "http://localhost",
-    "http://localhost:8080",
-]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,

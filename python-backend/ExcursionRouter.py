@@ -6,15 +6,24 @@ from database import get_db, engine
 from models import Event, Excursion
 from schemas import ExcursionDto
 import datetime
-
+from pydantic import BaseModel
 
 router = APIRouter(tags=["Excursions"])
 
 
+class Excursion_Model(BaseModel):
+    name: str
+    short_description: str
+    description: str
+    duration: int
+    person: str
+    person_photo_path: str
+
+
 @router.post('/excursion/add/')
-async def initdb(session: Session = Depends(get_db)):
-    excursion = insert(Excursion).values(name='Excursion', short_description='Cool excursion', description='Really cool excursion', duration=90, person='Ivan', person_photo_path='/static/photos/1.jpg')
-    session.execute(excursion)
+async def initdb(excursion: Excursion_Model, session: Session = Depends(get_db)):
+    excursion_obj = insert(Excursion).values(name=excursion["name"], short_description=excursion["short_desription"], description=excursion["description"], duration=excursion["duration"], person=excursion["person"], person_photo_path=excursion["person_photo_path"])
+    session.execute(excursion_obj)
     session.commit()
 
 
