@@ -22,7 +22,8 @@ class Excursion_Model(BaseModel):
 
 @router.post('/excursion/add/')
 async def initdb(excursion: Excursion_Model, session: Session = Depends(get_db)):
-    excursion_obj = insert(Excursion).values(name=excursion["name"], short_description=excursion["short_desription"], description=excursion["description"], duration=excursion["duration"], person=excursion["person"], person_photo_path=excursion["person_photo_path"])
+    excursion = dict(excursion)
+    excursion_obj = insert(Excursion).values(name=excursion["name"], short_description=excursion["short_description"], description=excursion["description"], duration=excursion["duration"], person=excursion["person"], person_photo_path=excursion["person_photo_path"])
     session.execute(excursion_obj)
     session.commit()
 
