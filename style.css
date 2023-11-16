@@ -161,7 +161,7 @@ h1{
 
 .vertical{
     writing-mode: vertical-rl;
-    transform: 90deg;
+    transform: rotate(180deg);
     color: #000;
     font-family: 'Inknut Antiqua';
     font-size: 2.5rem;
